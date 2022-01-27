@@ -1,9 +1,12 @@
 import React from 'react'
+import "./Main.sass"
 
 const Main = () => {
     return (
-        <div>
-           <span>ASDASDASDAS</span>
+        <div className='main'>
+            <div className='main__box'>
+           <span className='main_text'>Привет, Гость</span>
+           </div>
         </div>
     )
 }
