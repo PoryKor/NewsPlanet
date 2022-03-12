@@ -3,10 +3,10 @@ import React from 'react'
 const Program = (props) => {
   return (
     <div className='background_list'>
-    {props.fetchProgram.map((item)=>{
+    {props.fetchProgram.map((item)=>(
     <div className='progrem_list'>
-        <span>{item.num}</span>
-    <span>{item.text}</span></div>})}
+        <span className='program-item'>{item.num}</span>
+    <span className='program-item'>{item.text}</span></div>))}
     </div>
   )
 }
