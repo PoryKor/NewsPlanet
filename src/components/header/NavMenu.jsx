@@ -20,6 +20,9 @@ const NavMenu = ({ children }) => {
         <Link className='header__link' to="/timetable" onClick={linkClick}>
             <span className='header__link-text'>Расписание</span>
         </Link>
+        <Link className='header__link' to="/bigtable" onClick={linkClick}>
+            <span className='header__link-text'>Таблица</span>
+        </Link>
     </div>;
 };
 

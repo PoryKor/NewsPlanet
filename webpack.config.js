@@ -22,6 +22,13 @@ module.exports = {
                     extensions: [".js", ".jsx"],
                 },
             },
+            {
+                test: /\.(ts|tsx)?$/,
+                use: {
+                  loader: 'awesome-typescript-loader'
+                },
+                exclude: /node_modules/
+             },
             { test: /\.s[ac]ss$/i,
                 use: [
                   "style-loader",
