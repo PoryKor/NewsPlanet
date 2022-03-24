@@ -3,7 +3,7 @@ import useTable from "../../hooks/useTable";
 import TableFooter from "./TableFooter.jsx";
 
 type BigTableProps = {
-  somProps: [];
+  somProps: []
 };
 
 type SortTable = "ascn" | "desc";
@@ -50,7 +50,7 @@ function SortButton({ sortOrder, columnKey, sortKey, onClick, }: {
     >
       ▲
     </button>
-  );
+  )
 }
 
 
@@ -94,7 +94,7 @@ const BigTable: React.FC<BigTableProps> = () => {
       })
     if (reverse) {
 
-      return sortedData.reverse();
+      return sortedData.reverse()
     }
 
     return sortedData;

@@ -7,6 +7,7 @@ import PhoneSearch from "../phoneSearch/PhoneSearch.jsx";
 import TimeTable from "../timeTable/TimeTable.jsx";
 import NavState from '../../context/navState';
 import BigTable from "../bigTable/BigTableTest.tsx";
+import Cat from "../catView/Cat.jsx";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/phoneSearch" element={<PhoneSearch />} />
                         <Route path="/timetable" element={<TimeTable />} />
                         <Route path="/bigtable" element={<BigTable />} />
+                        <Route path="/catApp" element={<Cat/>} />
                         {/* <Route exact path='/news' component={() => <NewsPage/>} /> */}
                     </Routes>
                 </div>
