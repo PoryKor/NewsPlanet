@@ -6,7 +6,7 @@ import NewsPage from "../newsPage/NewsPage";
 import PhoneSearch from "../phoneSearch/PhoneSearch.jsx";
 import TimeTable from "../timeTable/TimeTable.jsx";
 import NavState from '../../context/navState';
-import BigTable from "../bigTable/BigTableTest.jsx";
+import BigTable from "../bigTable/BigTableTest.tsx";
 
 function App() {
     return (

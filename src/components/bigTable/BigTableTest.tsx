@@ -64,8 +64,6 @@ const BigTable: React.FC<BigTableProps> = () => {
   const [sortOrder, setSortOrder] = useState<SortTable>("ascn");
   const [page, setPage] = useState(1);
   const { slice, range } = useTable(dataSorted, page, 10);
-  
-
   const factorial = useMemo(() => generateData(), []);
 
 
@@ -87,17 +85,18 @@ const BigTable: React.FC<BigTableProps> = () => {
     sortKey: SortKeys;
     reverse: boolean;
   }) {
-    console.log()
     if (!sortKey) return tableData;
 
     const sortedData = data.sort((a, b) => {
       return a[sortKey] > b[sortKey] ? 1 : -1;
-    });
+    }).filter(function(i){
+      return true 
+      })
     if (reverse) {
-      setDataSorted(sortedData.reverse())
+
       return sortedData.reverse();
     }
-    setDataSorted(sortedData)
+
     return sortedData;
   }
 
@@ -122,11 +121,11 @@ const BigTable: React.FC<BigTableProps> = () => {
           tableData.last_name.includes(e.currentTarget.value) ||
           tableData.email.includes(e.currentTarget.value)
     })
-      setData(searchInTableValue)
+    setDataSorted(searchInTableValue)
     } else
       factorial.then(res => {
         setIsload(true)
-        setData(res)
+        setDataSorted(res)
       })
   }
 
