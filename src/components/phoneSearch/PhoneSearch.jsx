@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { phoneDataAct } from '../../actions/phoneDataAct'
-import PhoneInput from './PhoneInput';
+import PhoneInput from './PhoneInput.jsx';
 import "./PhoneSearch.sass"
 
 
@@ -14,7 +14,6 @@ const PhoneSearch = () => {
   const dispatch = useDispatch()
 
 const addPhoneClick = () => {
-
   dispatch(phoneDataAct(card))
   inputPhone.current.value = ""
   setCard('')
